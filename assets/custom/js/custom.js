@@ -377,16 +377,6 @@ function animatecounters() {
 }
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-document.getElementById("show-more-btn").addEventListener("click", function () {
-  // Show all activity cards
-  const hiddenCards = document.querySelectorAll(".activity-card");
-  hiddenCards.forEach((card) => {
-    card.style.display = "block";
-  });
-
-  // Hide the button after expanding
-  this.style.display = "none";
-});
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 const imageGalleryModal = document.getElementById("imageGalleryModal");
