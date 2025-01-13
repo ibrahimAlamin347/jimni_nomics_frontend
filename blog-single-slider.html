@@ -37,13 +37,20 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-
-
-    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css"
@@ -191,31 +198,10 @@
               </button>
               <div class="collapse navbar-collapse" id="fablesNavDropdown">
                 <ul class="navbar-nav mx-auto fables-nav">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="sub-nav1"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="sub-nav1">
                       Home
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                      <li>
-                        <a class="dropdown-item" href="home1.html">Home 1</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="home2.html">Home 2</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="home3.html">Home 3</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="home4.html">Home 4</a>
-                      </li>
-                    </ul>
                   </li>
 
                   <li class="nav-item dropdown">
@@ -885,7 +871,10 @@
               <i class="fas fa-sync-alt"></i> <span>Last Updated: </span> 0min
               ago
             </span>
-            <a class="btn btn-outline-primary btn-sm ms-2 ml-1" href="#opens-hours">
+            <a
+              class="btn btn-outline-primary btn-sm ms-2 ml-1"
+              href="#opens-hours"
+            >
               See Hours
             </a>
           </p>
@@ -900,87 +889,140 @@
             <i class="fas fa-thumbs-up"></i> Like
           </button>
 
-          <button class="btn btn-outline-primary view-images float-end" data-bs-toggle="modal" data-bs-target="#imageGalleryModal">
-        <i class="fas fa-images"></i> View All Images
-    </button>
+          <button
+            class="btn btn-outline-primary view-images float-end"
+            data-bs-toggle="modal"
+            data-bs-target="#imageGalleryModal"
+          >
+            <i class="fas fa-images"></i> View All Images
+          </button>
 
-    <div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-labelledby="imageGalleryModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
+          <div
+            class="modal fade"
+            id="imageGalleryModal"
+            tabindex="-1"
+            aria-labelledby="imageGalleryModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+              <div class="modal-content">
                 <div class="modal-header bg-light">
-                    <h5 class="modal-title" id="imageGalleryModalLabel">Photos for Jimni Nomic</h5>
-                    <div class="d-flex align-items-center">
-                        <form class="me-3">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search images..." aria-label="Search">
-                                <span class="input-group-text"><i class="fas fa-search"></i></span>
-                            </div>
-                        </form>
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                            <i class="fas fa-plus"></i> Add photos
-                        </button>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                  <h5 class="modal-title" id="imageGalleryModalLabel">
+                    Photos for Jimni Nomic
+                  </h5>
+                  <div class="d-flex align-items-center">
+                    <form class="me-3">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search images..."
+                          aria-label="Search"
+                        />
+                        <span class="input-group-text"
+                          ><i class="fas fa-search"></i
+                        ></span>
+                      </div>
+                    </form>
+                    <button
+                      class="btn btn-success"
+                      data-bs-toggle="modal"
+                      data-bs-target="#uploadModal"
+                    >
+                      <i class="fas fa-plus"></i> Add photos
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                    </div>
+                  <div class="row"></div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-labelledby="imageModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
                 <div class="overlay-navbar">
-                    <i class="fas fa-arrow-left fa-2x" id="backToGallery"></i>
-                    <div>
-                        <i class="fas fa-chevron-left fa-2x" id="prevImage"></i>
-                        <i class="fas fa-chevron-right fa-2x" id="nextImage"></i>
-                    </div>
+                  <i class="fas fa-arrow-left fa-2x" id="backToGallery"></i>
+                  <div>
+                    <i class="fas fa-chevron-left fa-2x" id="prevImage"></i>
+                    <i class="fas fa-chevron-right fa-2x" id="nextImage"></i>
+                  </div>
                 </div>
                 <div class="modal-img">
-                    <img src="" alt="Full Image" id="fullImage">
+                  <img src="" alt="Full Image" id="fullImage" />
                 </div>
                 <div class="modal-info">
-                    <h5 id="imageTitle">Photos for Jimni Nomic</h5>
-                    <p><span id="imageNumber">1</span> of <span id="totalImages">0</span></p>
-                    <hr>
-                    <p id="imageDescription">Jimni Nomic on January 10, 2025</p>
-                    <br>
-                    <a href="#">
-                      <i class="far fa-thumbs-up fa-lg"></i>
-                    </a>
+                  <h5 id="imageTitle">Photos for Jimni Nomic</h5>
+                  <p>
+                    <span id="imageNumber">1</span> of
+                    <span id="totalImages">0</span>
+                  </p>
+                  <hr />
+                  <p id="imageDescription">Jimni Nomic on January 10, 2025</p>
+                  <br />
+                  <a href="#">
+                    <i class="far fa-thumbs-up fa-lg"></i>
+                  </a>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+          <div
+            class="modal fade"
+            id="uploadModal"
+            tabindex="-1"
+            aria-labelledby="uploadModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="uploadModalLabel">Upload Photos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h5 class="modal-title" id="uploadModalLabel">
+                    Upload Photos
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Select images to upload</label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Upload</button>
-                    </form>
+                  <form>
+                    <div class="mb-3">
+                      <label for="formFileMultiple" class="form-label"
+                        >Select images to upload</label
+                      >
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="formFileMultiple"
+                        multiple
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Upload
+                    </button>
+                  </form>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-
-
-
-
-
+          </div>
         </div>
       </div>
     </div>
@@ -1008,22 +1050,35 @@
       <div class="row my-4 my-lg-5">
         <div class="col-12 col-lg-8">
           <div class="action-button mb-3">
-            <a href="#Comments-section" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2">
+            <a
+              href="#Comments-section"
+              class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2"
+            >
               Write a Review
             </a>
-            <a href="#site-address" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2">
+            <a
+              href="#site-address"
+              class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2"
+            >
               Chat With Owner
             </a>
-            <a href="#contact-detail" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2">
+            <a
+              href="#contact-detail"
+              class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2"
+            >
               Contact Us Now
             </a>
-            <a href="#report" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2">Report</a>
+            <a
+              href="#report"
+              class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2 mb-2"
+              >Report</a
+            >
           </div>
           <div
             class="owl-carousel owl-theme default-carousel nav-0 blog-single-slider fables-second-dots"
           >
             <div>
-              <a href="#">
+              <a data-fancybox href="assets/custom/images/single-blog.jpg">
                 <img
                   src="assets/custom/images/single-blog.jpg"
                   alt=""
@@ -1032,16 +1087,22 @@
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                data-fancybox
+                href="https://img.freepik.com/free-photo/businesswoman-working-laptop_53876-13570.jpg"
+              >
                 <img
-                  src="https://img.freepik.com/free-photo/businesswoman-working-laptop_53876-13570.jpg?"
+                  src="https://img.freepik.com/free-photo/businesswoman-working-laptop_53876-13570.jpg"
                   alt=""
                   class="w-100"
                 />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                data-fancybox
+                href="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1191.jpg"
+              >
                 <img
                   src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1191.jpg"
                   alt=""
@@ -1049,8 +1110,11 @@
                 />
               </a>
             </div>
-          <div>
-              <a href="#">
+            <div>
+              <a
+                data-fancybox
+                href="https://img.freepik.com/premium-photo/online-english-courses-home-close-up-hands-man-teaching-students-remotely-interior_489646-15785.jpg"
+              >
                 <img
                   src="https://img.freepik.com/premium-photo/online-english-courses-home-close-up-hands-man-teaching-students-remotely-interior_489646-15785.jpg"
                   alt=""
@@ -1059,7 +1123,10 @@
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                data-fancybox
+                href="https://img.freepik.com/premium-photo/rear-view-african-businessman-typing-financial-documents-laptop-office_249974-9073.jpg"
+              >
                 <img
                   src="https://img.freepik.com/premium-photo/rear-view-african-businessman-typing-financial-documents-laptop-office_249974-9073.jpg"
                   alt=""
@@ -1068,7 +1135,10 @@
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                data-fancybox
+                href="https://img.freepik.com/free-photo/entrepreneur-business-marketing-straegy-concept_53876-120599.jpg"
+              >
                 <img
                   src="https://img.freepik.com/free-photo/entrepreneur-business-marketing-straegy-concept_53876-120599.jpg"
                   alt=""
@@ -1079,76 +1149,54 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-4">
-          <!-- <div class="fables-blog-search">
-            <form>
-              <div class="row">
-                <div class="col-12 col-sm-9 col-md-8 mb-3 mb-md-0">
-                  <div class="input-icon">
-                    <span
-                      class="fables-iconsearch-icon fables-input-icon font-14"
-                    ></span>
-                    <input
-                      type="text"
-                      class="form-control rounded-0 py-2 width-100"
-                    />
-                  </div>
-                </div>
-                <div class="col-12 col-sm-3 col-md-4 pl-md-0">
-                  <button
-                    type="submit"
-                    class="btn fables-second-background-color rounded-0 text-white font-15 semi-font py-2 btn-block"
-                  >
-                    Search
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div> -->
-          <div id="site-address" class="mt-4">
-            <h2
-              class="position-relative font-23 semi-font fables-blog-category-head fables-main-text-color fables-second-before pl-3 mb-4"
-            >
-              Website
-            </h2>
-            <ul
-              class="nav fables-blog-cat-list fables-forth-text-color fables-second-hover-color-link"
-            >
-              <li><a href="#">https://jimninomics.com</a></li>
-            </ul>
-            <hr />
-          </div>
-          <div id="contact-detail" class="mt-4">
-            <h2
-              class="position-relative font-23 semi-font fables-blog-category-head fables-main-text-color fables-second-before pl-3 mb-4"
-            >
-              Phone Number
-            </h2>
-            <ul
-              class="nav fables-blog-cat-list fables-forth-text-color fables-second-hover-color-link"
-            >
-              <li><a href="#">2015352733</a></li>
-            </ul>
-            <hr />
-          </div>
-          <div id="Address" class="mt-4">
-            <h2 
-              class="position-relative font-23 semi-font fables-blog-category-head fables-main-text-color fables-second-before pl-3 mb-4"
-            >
-              Address
-            </h2>
-            <ul
-              class="nav fables-blog-cat-list fables-forth-text-color fables-second-hover-color-link"
-            >
+        <div class="col-12 col-lg-4 mt-4">
+          <!-- Website Section -->
+          <div class="info-card">
+            <div class="info-header">
+              <i class="fas fa-globe info-icon"></i>
+              <h2 class="info-title">Website</h2>
+            </div>
+            <ul class="info-list">
               <li>
-                <a href="#"
-                  >Ayinde Estate Bembo Apata Ibadan, Ibadan, Oyo, Nigeria</a
+                <a
+                  href="https://jimninomics.com"
+                  target="_blank"
+                  class="info-link"
                 >
+                  https://jimninomics.com
+                </a>
               </li>
             </ul>
-            <hr />
+          </div>
+
+          <!-- Phone Section -->
+          <div class="info-card">
+            <div class="info-header">
+              <i class="fas fa-phone-alt info-icon"></i>
+              <h2 class="info-title">Phone Number</h2>
+            </div>
+            <ul class="info-list">
+              <li>
+                <a href="tel:2015352733" class="info-link">2015352733</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address Section -->
+          <div class="info-card">
+            <div class="info-header">
+              <i class="fas fa-map-marker-alt info-icon"></i>
+              <h2 class="info-title">Address</h2>
+            </div>
+            <ul class="info-list">
+              <li>
+                <a href="https://goo.gl/maps" target="_blank" class="info-link">
+                  Ayinde Estate Bembo Apata, Ibadan, Oyo, Nigeria
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
         <div class="col-12 col-lg-8">
           <div class="mousewheel-carousel mb-6 mt-3">
@@ -1163,25 +1211,30 @@
             <div
               class="flickity-slider"
               data-flickity='{ 
-           "cellAlign": "left", 
-           "contain": true, 
-           "groupCells": true, 
-           "wrapAround": true, 
-           "prevNextButtons": false,
-           "pageDots": false,
-           "gap": 2
-         }'
+             "cellAlign": "left", 
+             "contain": true, 
+             "groupCells": true, 
+             "wrapAround": true, 
+             "prevNextButtons": false,
+             "pageDots": false,
+             "gap": 2
+           }'
             >
               <!-- Slide 1 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1191.jpg"
-                  class="card-img-top"
-                  alt="Product 1"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1191.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1191.jpg"
+                    class="card-img-top"
+                    alt="Product 1"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 1</h5>
-                  <p class="text-primary fw-bold"> &#x20A6;25000</p>
+                  <p class="text-primary fw-bold">&#x20A6;25000</p>
                   <p class="card-text message">
                     This is a description of the product...
                   </p>
@@ -1190,32 +1243,38 @@
 
               <!-- Slide 2 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/free-photo/young-woman-manager-checking-business-statistics-financial-reports-laptop-working-start-up-office-late-night_482257-2426.jpg"
-                  class="card-img-top"
-                  alt="Product 2"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/young-woman-manager-checking-business-statistics-financial-reports-laptop-working-start-up-office-late-night_482257-2426.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/young-woman-manager-checking-business-statistics-financial-reports-laptop-working-start-up-office-late-night_482257-2426.jpg"
+                    class="card-img-top"
+                    alt="Product 2"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 2</h5>
-                  <p class="text-primary fw-bold">
-                     &#x20A6;30000.00
-                  </p>
+                  <p class="text-primary fw-bold">&#x20A6;30000.00</p>
                   <p class="card-text message">Another short description...</p>
                 </div>
               </div>
 
               <!-- Slide 3 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/premium-photo/online-english-courses-home-close-up-hands-man-teaching-students-remotely-interior_489646-15785.jpg"
-                  class="card-img-top"
-                  alt="Product 3"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/premium-photo/online-english-courses-home-close-up-hands-man-teaching-students-remotely-interior_489646-15785.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/premium-photo/online-english-courses-home-close-up-hands-man-teaching-students-remotely-interior_489646-15785.jpg"
+                    class="card-img-top"
+                    alt="Product 3"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 3</h5>
-                  <p class="text-primary fw-bold">
-                     &#x20A6;35000.00
-                  </p>
+                  <p class="text-primary fw-bold">&#x20A6;35000.00</p>
                   <p class="card-text message">
                     Great product with amazing features...
                   </p>
@@ -1224,16 +1283,19 @@
 
               <!-- Slide 4 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/premium-photo/rear-view-african-businessman-typing-financial-documents-laptop-office_249974-9073.jpg"
-                  class="card-img-top"
-                  alt="Product 4"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/premium-photo/rear-view-african-businessman-typing-financial-documents-laptop-office_249974-9073.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/premium-photo/rear-view-african-businessman-typing-financial-documents-laptop-office_249974-9073.jpg"
+                    class="card-img-top"
+                    alt="Product 4"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 4</h5>
-                  <p class="text-primary fw-bold">
-                     &#x20A6;40000.00
-                  </p>
+                  <p class="text-primary fw-bold">&#x20A6;40000.00</p>
                   <p class="card-text message">
                     A top-notch product to consider...
                   </p>
@@ -1242,16 +1304,19 @@
 
               <!-- Slide 5 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
-                  class="card-img-top"
-                  alt="Product 5"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
+                    class="card-img-top"
+                    alt="Product 5"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 5</h5>
-                  <p class="text-primary fw-bold">
-                     &#x20A6;45000.00
-                  </p>
+                  <p class="text-primary fw-bold">&#x20A6;45000.00</p>
                   <p class="card-text message">
                     This product is highly recommended...
                   </p>
@@ -1260,16 +1325,19 @@
 
               <!-- Slide 6 -->
               <div class="card">
-                <img
-                  src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
-                  class="card-img-top"
-                  alt="Product 6"
-                />
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-with-pie-charts-it-other-papers_1232-1192.jpg"
+                    class="card-img-top"
+                    alt="Product 6"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Product 6</h5>
-                  <p class="text-primary fw-bold">
-                     &#x20A6;50000.00
-                  </p>
+                  <p class="text-primary fw-bold">&#x20A6;50000.00</p>
                   <p class="card-text message">
                     An excellent choice for your needs...
                   </p>
@@ -1560,45 +1628,131 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                 iaculis egestas nisl velino in faucibus. Pellentes
               </p>
-              <div class="my-image-grid" id="myGallery">
-                <img src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg?ga=GA1.1.1421090188.1736438914&semt=ais_hybrid" alt="Laptop on Wooden Table">
-                <img src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg?ga=GA1.1.1421090188.1736438914&semt=ais_hybrid" alt="Laptop on Wooden Table">
-                <img src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg?ga=GA1.1.1421090188.1736438914&semt=ais_hybrid" alt="Laptop on Wooden Table">
-                <img src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg?ga=GA1.1.1421090188.1736438914&semt=ais_hybrid" alt="Laptop on Wooden Table">
+              <div class="my-image-grid">
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
+                <a
+                  data-fancybox
+                  href="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/laptop-wooden-table_53876-24794.jpg"
+                    alt="Laptop on Wooden Table"
+                  />
+                </a>
               </div>
 
-
-              <div class="modal fade my-image-modal" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+              <div
+                class="modal fade my-image-modal"
+                id="imageModal"
+                tabindex="-1"
+                aria-labelledby="imageModalLabel"
+                aria-hidden="true"
+              >
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="imageModalLabel"></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="imageCarousel" class="carousel slide" data-bs-ride="false">
-                                <div class="carousel-inner"></div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="playButton">Play</button>
-                            <button type="button" class="btn btn-danger" id="pauseButton">Pause</button>
-                        </div>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="imageModalLabel"></h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
                     </div>
+                    <div class="modal-body">
+                      <div
+                        id="imageCarousel"
+                        class="carousel slide"
+                        data-bs-ride="false"
+                      >
+                        <div class="carousel-inner"></div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#imageCarousel"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#imageCarousel"
+                          data-bs-slide="next"
+                        >
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="playButton"
+                      >
+                        Play
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="pauseButton"
+                      >
+                        Pause
+                      </button>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
-
-
-
 
           <div class="fables-blog-form">
             <h2
@@ -1616,14 +1770,19 @@
                   /> -->
 
                   <label for="rating">Rating:</label>
-                    <select class="form-control form-control rounded-0 p-3" id="rating" name="rating" required>
-                        <option value="">Select a rating</option>
-                        <option value="1">1 Star</option>
-                        <option value="2">2 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="5">5 Stars</option>
-                    </select>
+                  <select
+                    class="form-control form-control rounded-0 p-3"
+                    id="rating"
+                    name="rating"
+                    required
+                  >
+                    <option value="">Select a rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                  </select>
                 </div>
                 <div class="form-group col-md-6">
                   <input
@@ -1635,9 +1794,15 @@
               </div>
 
               <div class="form-group col-md-12 comment-file">
-                    <label for="fileUpload">Attach File (Max 10)</label>
-                    <input type="file" id="fileUpload" class="form-control-file" multiple accept=".jpg, .jpeg, .png, .gif">
-                </div>
+                <label for="fileUpload">Attach File (Max 10)</label>
+                <input
+                  type="file"
+                  id="fileUpload"
+                  class="form-control-file"
+                  multiple
+                  accept=".jpg, .jpeg, .png, .gif"
+                />
+              </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
@@ -1718,7 +1883,7 @@
             </h2>
             <div class="row mb-4">
               <div class="col-4">
-                <a href="#"
+                <a data-fancybox href="assets/custom/images/blog-cat1.jpg"
                   ><img
                     src="assets/custom/images/blog-cat1.jpg"
                     alt=""
@@ -1740,7 +1905,7 @@
             </div>
             <div class="row mb-4">
               <div class="col-4">
-                <a href="#"
+                <a data-fancybox href="assets/custom/images/blog-cat2.jpg"
                   ><img
                     src="assets/custom/images/blog-cat2.jpg"
                     alt=""
@@ -1762,7 +1927,7 @@
             </div>
             <div class="row mb-4">
               <div class="col-4">
-                <a href="#"
+                <a data-fancybox href="assets/custom/images/blog-cat3.jpg"
                   ><img
                     src="assets/custom/images/blog-cat3.jpg"
                     alt=""
@@ -1784,7 +1949,7 @@
             </div>
             <div class="row mb-4">
               <div class="col-4">
-                <a href="#"
+                <a data-fancybox href="assets/custom/images/blog-cat4.jpg"
                   ><img
                     src="assets/custom/images/blog-cat4.jpg"
                     alt=""
@@ -1984,55 +2149,12 @@
     <script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
     <script src="assets/vendor/timeline/jquery.timelify.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/custom/js/custom.js"></script>
-    <script>
-        const gallery = document.getElementById('myGallery');
-        const modal = document.querySelector('.my-image-modal');
-        const carouselInner = modal.querySelector('.carousel-inner');
-        const modalTitle = modal.querySelector('.modal-title')
-        const playButton = modal.querySelector('#playButton');
-        const pauseButton = modal.querySelector('#pauseButton');
-        let bsModal;
-        let carouselInstance;
-
-        gallery.addEventListener('click', (event) => {
-            if (event.target.tagName === 'IMG') {
-                const images = gallery.querySelectorAll('img');
-                carouselInner.innerHTML = '';
-                modalTitle.textContent = event.target.alt
-
-                images.forEach((img, index) => {
-                    const activeClass = index === 0 ? 'active' : '';
-                    carouselInner.innerHTML += `
-                        <div class="carousel-item ${activeClass}">
-                            <img src="${img.src}" class="d-block w-100" alt="${img.alt}">
-                        </div>
-                    `;
-                });
-
-                if (!bsModal) {
-                    bsModal = new bootstrap.Modal(modal);
-                }
-                bsModal.show();
-
-                carouselInstance = new bootstrap.Carousel('#imageCarousel', {
-                    interval: 3000 // Disable auto-cycling
-                });
-            }
-        });
-
-        playButton.addEventListener('click', () => {
-            carouselInstance.cycle();
-        });
-
-        pauseButton.addEventListener('click', () => {
-            carouselInstance.pause();
-        });
-    </script>
-
-
-
-
+    <script></script>
   </body>
 </html>
