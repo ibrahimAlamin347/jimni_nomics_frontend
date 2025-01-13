@@ -667,6 +667,10 @@ body {
   .card-img-top {
     height: 100px;
   }
+  .activity-card {
+    max-width: 75%;
+    margin: auto;
+  }
 }
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
