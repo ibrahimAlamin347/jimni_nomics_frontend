@@ -635,7 +635,85 @@ body {
   cursor: pointer;
 }
 
-/* Responsive adjustments for modal size */
+/* Neumorphism Style */
+.product-card {
+  background: #f0f0f3;
+  border-radius: 15px;
+  box-shadow:
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Image Styling */
+.product-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Product Text Styling */
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 0.9rem;
+}
+
+.product-description {
+  color: #666;
+}
+
+.product-card-wrapper {
+  display: none;
+}
+
+/* Show the first 4 products initially */
+.product-card-wrapper:nth-child(-n + 4) {
+  display: block;
+}
+
+/* Button hover effect */
+#product-show-more-btn {
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#show-more-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
   .my-image-modal .modal-dialog {
     max-width: 95vw;
