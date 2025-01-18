@@ -1074,6 +1074,7 @@
               >Report</a
             >
           </div>
+
           <div
             class="owl-carousel owl-theme default-carousel nav-0 blog-single-slider fables-second-dots"
           >
@@ -2179,7 +2180,18 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Initial JavaScript functionality
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          items: 1,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+        });
+      });
+
       const comments = document.querySelectorAll(".comment");
       const prevBtn = document.getElementById("prev-btn");
       const nextBtn = document.getElementById("next-btn");
