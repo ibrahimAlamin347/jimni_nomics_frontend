@@ -2178,5 +2178,38 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Initial JavaScript functionality
+      const comments = document.querySelectorAll(".comment");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      let currentPage = 0;
+      const commentsPerPage = 5;
+
+      function updateComments() {
+        comments.forEach((comment, index) => {
+          comment.style.display =
+            index >= currentPage * commentsPerPage &&
+            index < (currentPage + 1) * commentsPerPage
+              ? "block"
+              : "none";
+        });
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled =
+          (currentPage + 1) * commentsPerPage >= comments.length;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentPage--;
+        updateComments();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentPage++;
+        updateComments();
+      });
+
+      updateComments(); // Initialize
+    </script>
   </body>
 </html>
