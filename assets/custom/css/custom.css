@@ -714,6 +714,129 @@ body {
   transform: scale(1.05);
 }
 
+/* Symmetry Studio style for highlighting */
+.symmetry-studio {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+}
+
+/* LustrousGrid pattern for state buttons */
+.lustrous-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.design-heaven {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.design-heaven:hover {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the Previous and Next buttons */
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.nav-button i {
+  margin-right: 5px;
+}
+
+.country-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.country-list {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.country-item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+/* Heading style */
+.section-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.comments-header {
+  background: #f4f4f4;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.comment {
+  display: none; /* Default to hidden */
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.comment:last-child {
+  border-bottom: none;
+}
+.comment span {
+  font-size: 14px;
+  color: #888;
+}
+.comment p {
+  margin: 5px 0;
+}
+.stars {
+  color: #ff9800;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.pagination button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .my-image-modal .modal-dialog {
     max-width: 95vw;

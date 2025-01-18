@@ -1825,6 +1825,31 @@
       </div>
     </section>
 
+    <div class="container py-5">
+      <!-- Section Heading -->
+      <h2 class="section-heading">Explore the World of Regions</h2>
+
+      <!-- Header Section -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <button id="prev-button" class="nav-button">
+          <i class="fas fa-arrow-left"></i> Previous
+        </button>
+        <div class="country-slider">
+          <div id="country-list" class="country-list">
+            <!-- Country buttons will be dynamically loaded here -->
+          </div>
+        </div>
+        <button id="next-button" class="nav-button">
+          Next <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Content Section -->
+      <div id="region-container" class="lustrous-grid">
+        <!-- Regions will be dynamically loaded here -->
+      </div>
+    </div>
+
     <div class="container">
       <div class="row my-4 my-md-5">
         <div
@@ -2275,6 +2300,149 @@
           }
         });
       });
+
+      // _________________________________________________________________________
+      const allCountries = [
+        "USA",
+        "Nigeria",
+        "Canada",
+        "Brazil",
+        "Germany",
+        "India",
+        "China",
+        "Australia",
+        "France",
+        "Italy",
+        "Russia",
+        "Japan",
+        "Mexico",
+        "South Africa",
+        "Argentina",
+        "Egypt",
+        "Kenya",
+        "South Korea",
+        "Spain",
+        "Turkey",
+      ];
+
+      const countriesWithRegions = {
+        USA: ["California", "Texas", "New York", "Florida", "Illinois"],
+        Nigeria: [
+          "Abia",
+          "Adamawa",
+          "Akwa Ibom",
+          "Anambra",
+          "Bauchi",
+          "Bayelsa",
+          "Benue",
+          "Borno",
+          "Cross River",
+          "Delta",
+          "Ebonyi",
+          "Edo",
+          "Ekiti",
+          "Enugu",
+          "Gombe",
+          "Imo",
+          "Jigawa",
+          "Kaduna",
+          "Kano",
+          "Katsina",
+          "Kebbi",
+          "Kogi",
+          "Kwara",
+          "Lagos",
+          "Nasarawa",
+          "Niger",
+          "Ogun",
+          "Ondo",
+          "Osun",
+          "Oyo",
+          "Plateau",
+          "Rivers",
+          "Sokoto",
+          "Taraba",
+          "Yobe",
+          "Zamfara",
+        ],
+        Canada: [
+          "Ontario",
+          "Quebec",
+          "British Columbia",
+          "Alberta",
+          "Manitoba",
+        ],
+        // Add more countries and their regions here as needed.
+      };
+
+      let currentIndex = 0;
+      const itemsPerView = 5; // Number of countries visible at a time
+
+      function createCountryButtons() {
+        const countryList = document.getElementById("country-list");
+        countryList.innerHTML = "";
+
+        allCountries.forEach((country) => {
+          const button = document.createElement("button");
+          button.className = "btn btn-outline-secondary country-item";
+          button.textContent = country;
+          button.onclick = () => {
+            highlightButton(button);
+            showRegions(country);
+          };
+          countryList.appendChild(button);
+        });
+        updateSlider();
+      }
+
+      function updateSlider() {
+        const countryList = document.getElementById("country-list");
+        const offset = (currentIndex * -100) / itemsPerView;
+        countryList.style.transform = `translateX(${offset}%)`;
+      }
+
+      function highlightButton(selectedButton) {
+        const buttons = document.querySelectorAll(".country-item");
+        buttons.forEach((button) => {
+          button.classList.remove("symmetry-studio");
+          button.classList.add("btn-outline-secondary");
+        });
+        selectedButton.classList.remove("btn-outline-secondary");
+        selectedButton.classList.add("symmetry-studio");
+      }
+
+      function showRegions(country) {
+        const container = document.getElementById("region-container");
+        container.innerHTML = "";
+
+        const regions = countriesWithRegions[country] || [
+          "No regions available for this country",
+        ];
+        regions.forEach((region) => {
+          const button = document.createElement("button");
+          button.className = "design-heaven";
+          button.textContent = region;
+          container.appendChild(button);
+        });
+      }
+
+      document.getElementById("next-button").addEventListener("click", () => {
+        if (currentIndex < allCountries.length - itemsPerView) {
+          currentIndex++;
+          updateSlider();
+        }
+      });
+
+      document.getElementById("prev-button").addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      });
+
+      // Initialize country buttons and default load
+      createCountryButtons();
+      showRegions("Nigeria");
     </script>
   </body>
 </html>
